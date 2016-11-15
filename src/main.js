@@ -9,7 +9,7 @@ if (!global.fetch) {
     require('isomorphic-fetch');
 }
 
-var HOST = 'https://www.bungie.net/platform/Destiny/'; // the is address to Bungie's API
+var HOST = 'https://www.bungie.net/platform/'; // the is address to Bungie's API
 var API_KEY;
 
 /** FIXME: this could potentially be broken up into smaller blocks
@@ -77,7 +77,7 @@ let createRequest = (lib, method) => {
 /**
  * preparing library for export
  */
-let Destiny = (apiKey=undefined, host='https://www.bungie.net/platform/Destiny/') => {
+let Destiny = (apiKey=undefined, host='https://www.bungie.net/platform/') => {
 
     if (!_.isString(apiKey) || _.isEmpty(apiKey)) {
         UTILS.error(`You must provide a valid api key. Expected: String, got: ${ typeof apiKey }. Get a key at: https://www.bungie.net/developer`);
